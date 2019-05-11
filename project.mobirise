@@ -1,43 +1,39 @@
 {
   "settings": {
-    "name": "Site-03-13_1117",
+    "name": "Crystal FM Dec 2018",
     "currentPage": "index.html",
     "theme": {
-      "name": "startupamp",
-      "title": "StartupAMP",
+      "name": "colorm",
+      "title": "ColorM",
       "styling": {
-        "primaryColor": "#e3699a",
-        "secondaryColor": "#ec7499",
-        "successColor": "#361291",
-        "infoColor": "#30d5a5",
-        "warningColor": "#022e93",
-        "dangerColor": "#0A193B",
-        "mainFont": "Source Sans Pro",
-        "display1Font": "Source Sans Pro",
-        "display1Size": 5.6,
-        "display2Font": "Source Sans Pro",
-        "display2Size": 3.4,
-        "display3Font": "Source Sans Pro",
-        "display3Size": 2.4,
-        "display4Font": "Source Sans Pro",
-        "display4Size": 1.8,
-        "display5Font": "Source Sans Pro",
-        "display5Size": 1.4,
-        "display6Font": "Source Sans Pro",
-        "display6Size": 1,
-        "display7Font": "Source Sans Pro",
-        "display7Size": "0.8",
-        "isRoundedButtons": false,
-        "isScrollToTopButton": false,
-        "arrowColor": "#e3699a",
-        "bodyPadding": false,
-        "bodyBG": "#ffffff"
-      }
+        "primaryColor": "#f39c12",
+        "buttonsColor": "#000000",
+        "secondaryColor": "#9b59b6",
+        "successColor": "#2ecc71",
+        "infoColor": "#3498db",
+        "warningColor": "#f1c40f",
+        "dangerColor": "#e74c3c",
+        "titleFont": "Roboto",
+        "subtitleFont": "Arimo",
+        "textFont": "Open Sans",
+        "isRoundedButtons": true,
+        "isAnimatedOnScroll": true,
+        "isScrollToTopButton": false
+      },
+      "additionalSetColors": [
+        "#0a2f7c"
+      ]
     },
     "path": "@PROJECT_PATH@",
-    "versionFirst": "4.9.5",
+    "versionFirst": "4.8.8",
     "siteFonts": [],
-    "uniqCompNum": 7,
+    "favicon": "",
+    "noImageResize": "",
+    "siteUrl": "undefined",
+    "cookiesAlert": "",
+    "gdpr": "",
+    "google-analytics": "",
+    "uniqCompNum": 40,
     "versionPublish": "4.9.6",
     "screenshot": "screenshot.png"
   },
@@ -45,7 +41,7 @@
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Home",
+        "title": "Welcome to the Crystal FM Website",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -53,689 +49,759 @@
       },
       "components": [
         {
-          "alias": false,
           "_styles": {
-            ".nav-item:focus, .nav-link:focus": {
-              "outline": "none"
-            },
-            ".navbar-nav": {
-              "list-style-type": "none",
-              "display": "flex",
-              "-webkit-flex-direction": "row",
-              "flex-direction": "row",
-              "padding-left": "0",
-              ".nav-link": {
-                "margin": "0.667em 1em",
-                "font-weight": "normal"
-              }
-            },
-            ".container": {
-              "display": "flex"
-            },
-            "@media (max-width: 991px)": {
-              "ul.navbar-nav": {
-                "-webkit-flex-direction": "column !important",
-                "flex-direction": "column !important",
-                "li": {
-                  "margin": "auto"
-                }
-              },
-              ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
-                "content": "\"\"",
-                "margin-left": "0.25rem",
-                "border-top": "0.35em solid",
-                "border-right": "0.35em solid transparent",
-                "border-left": "0.35em solid transparent",
-                "border-bottom": "0",
-                "top": "55%"
-              },
-              ".nav-dropdown .dropdown-menu .dropdown-item": {
-                "-webkit-justify-content": "center",
-                "justify-content": "center",
-                "display": "flex !important",
-                "-webkit-align-items": "center",
-                "align-items": "center"
-              }
-            },
-            "& when (@collapsed)": {
-              "ul.navbar-nav": {
-                "-webkit-flex-direction": "column !important",
-                "flex-direction": "column !important",
-                "li": {
-                  "margin": "auto"
-                }
-              },
-              ".dropdown-toggle[data-toggle=\"dropdown-submenu\"]:after": {
-                "content": "\"\"",
-                "margin-left": "0.25rem",
-                "border-top": "0.35em solid",
-                "border-right": "0.35em solid transparent",
-                "border-left": "0.35em solid transparent",
-                "border-bottom": "0",
-                "top": "55%"
-              },
-              ".nav-dropdown .dropdown-menu .dropdown-item": {
-                "-webkit-justify-content": "center",
-                "justify-content": "center",
-                "display": "flex !important",
-                "-webkit-align-items": "center",
-                "align-items": "center"
-              }
-            },
-            ".nav-dropdown .dropdown-menu": {
-              "border-radius": "0",
-              "border": "0",
-              "left": "0",
-              "margin": "0",
-              "min-width": "10rem",
-              "padding-bottom": "1.25rem",
-              "padding-top": "1.25rem",
-              "position": "absolute",
-              ".dropdown-item": {
-                "font-weight": "400",
-                "line-height": "2",
-                "display": "flex",
-                "background": "@menuBgColor",
-                "-webkit-align-items": "center",
-                "align-items": "center",
-                "width": "100%",
-                "padding": "0.25rem 1.5rem",
-                "clear": "both",
-                "margin": "0.5rem",
-                "text-align": "inherit",
-                "white-space": "nowrap",
-                "border": "0"
-              },
-              ".dropdown": {
-                "position": "relative"
-              }
-            },
-            ".nav-item.dropdown": {
-              "position": "relative",
-              ".dropdown-menu": {
-                "z-index": "-1",
-                "opacity": "0",
-                "pointer-events": "none"
-              },
-              "&:hover": {
-                "& > .dropdown-menu": {
-                  "z-index": "1",
-                  "opacity": "1",
-                  "pointer-events": "all"
-                }
-              }
-            },
-            ".dropdown-menu .dropdown:hover": {
-              "& > .dropdown-menu": {
-                "z-index": "1",
-                "opacity": "1",
-                "pointer-events": "all"
-              }
-            },
-            ".link.dropdown-toggle:after": {
-              "content": "\"\"",
-              "margin-left": "0.25rem",
-              "border-top": "0.35em solid",
-              "border-right": "0.35em solid transparent",
-              "border-left": "0.35em solid transparent",
-              "border-bottom": "0"
-            },
-            ".nav-dropdown .dropdown-submenu": {
-              "top": "0"
-            },
-            ".navbar": {
-              "z-index": "100",
-              "display": "flex",
-              "-webkit-flex-direction": "row",
-              "flex-direction": "row",
-              "width": "100%",
-              "min-height": "77px",
-              "transition": "all 0.3s",
-              "background": "@menuBgColor",
-              ".navbar-logo": {
-                "margin-right": "0.8rem",
-                "img": {
-                  "height": "auto"
-                }
-              },
-              "&.navbar-short": {
-                "background": "@menuBgColor !important",
-                ".navbar-brand": {
-                  "padding": "0"
-                }
-              },
-              "&.opened": {
-                "transition": "all 0.3s",
-                "background": "@menuBgColor !important"
-              },
-              ".dropdown-item": {
-                "padding": "0.25rem 1.5rem"
-              },
-              ".navbar-collapse": {
-                "display": "flex",
-                "-webkit-justify-content": "flex-end",
-                "justify-content": "flex-end",
-                "z-index": "1",
-                "-webkit-flex-basis": "100%",
-                "flex-basis": "100%",
-                "-webkit-align-items": "center",
-                "align-items": "center",
-                "& when not (@showItems)": {
-                  "display": "none !important"
-                }
-              },
-              "&.collapsed": {
-                "button.navbar-toggler": {
-                  "display": "block !important"
-                },
-                ".navbar-collapse": {
-                  "display": "none",
-                  "position": "absolute",
-                  "top": "0",
-                  "right": "0",
-                  "min-height": "100vh",
-                  "background": "@menuBgColor",
-                  "padding": "1.5rem 2rem 1rem 2rem",
-                  "& when (@sidebarSide = \"left\")": {
-                    "right": "auto",
-                    "left": "0"
-                  }
-                },
-                "&.opened": {
-                  ".navbar-collapse": {
-                    "&.show, &.collapsing": {
-                      "display": "block"
-                    }
-                  },
-                  ".dropdown-menu": {
-                    "top": "0"
-                  }
-                },
-                ".dropdown-menu": {
-                  "position": "relative",
-                  "background": "transparent !important",
-                  ".dropdown-submenu": {
-                    "left": "0 !important"
-                  },
-                  ".dropdown-item:after": {
-                    "right": "auto"
-                  }
-                },
-                ".dropdown-menu .dropdown-item": {
-                  "padding": "0.25rem 1.5rem",
-                  "text-align": "center",
-                  "margin": "0"
-                },
-                ".navbar-brand": {
-                  "-webkit-flex-shrink": "initial",
-                  "flex-shrink": "initial",
-                  "word-break": "break-word"
-                }
-              },
-              "@media (max-width: 991px)": {
-                ".navbar-collapse": {
-                  "display": "none",
-                  "position": "absolute",
-                  "top": "0",
-                  "right": "0",
-                  "min-height": "100vh",
-                  "background": "@menuBgColor",
-                  "padding": "1rem 2rem 1rem 2rem",
-                  "& when (@sidebarSide = \"left\")": {
-                    "right": "auto",
-                    "left": "0"
-                  }
-                },
-                "&.opened": {
-                  ".navbar-collapse": {
-                    "&.show, &.collapsing": {
-                      "display": "block"
-                    }
-                  },
-                  ".dropdown-menu": {
-                    "top": "0"
-                  }
-                },
-                ".dropdown-menu": {
-                  "position": "relative",
-                  "background": "transparent !important",
-                  ".dropdown-submenu": {
-                    "left": "0 !important"
-                  },
-                  ".dropdown-item:after": {
-                    "right": "auto"
-                  }
-                },
-                ".dropdown-menu .dropdown-item": {
-                  "padding": "0.25rem 1.5rem",
-                  "text-align": "center",
-                  "margin": "0"
-                },
-                ".navbar-brand": {
-                  "-webkit-flex-shrink": "initial",
-                  "flex-shrink": "initial",
-                  "word-break": "break-word"
-                }
-              }
-            },
-            ".navbar-brand": {
-              "display": "flex",
-              "-webkit-flex-shrink": "0",
-              "flex-shrink": "0",
-              "-webkit-align-items": "center",
-              "align-items": "center",
-              "margin-right": "0",
-              "padding": "0",
-              "transition": "all 0.3s",
-              "word-break": "break-word",
-              "z-index": "1",
-              ".navbar-caption": {
-                "line-height": "inherit !important",
-                "font-weight": "normal",
-                "letter-spacing": "1px",
-                "display": "flex"
-              },
-              ".navbar-logo a": {
-                "outline": "none"
-              }
-            },
-            ".dropdown-item.active, .dropdown-item:active": {
-              "background-color": "transparent"
-            },
-            ".navbar-expand-lg .navbar-nav .nav-link": {
-              "padding": "0"
-            },
-            ".navbar.navbar-expand-lg .dropdown": {
-              ".dropdown-menu": {
-                "background-color": "transparent"
-              },
-              ".dropdown-submenu": {
-                "margin": "0",
-                "left": "100%"
-              }
-            },
-            ".navbar .dropdown.open > .dropdown-menu": {
-              "display": "block"
-            },
-            "ul.navbar-nav": {
-              "-webkit-flex-wrap": "wrap",
-              "flex-wrap": "wrap"
-            },
-            ".navbar-buttons": {
-              "text-align": "center"
-            },
-            "button.navbar-toggler": {
-              "display": "none",
-              "outline": "none",
-              "width": "31px",
-              "height": "20px",
-              "cursor": "pointer",
-              "transition": "all 0.2s",
-              "position": "relative",
-              "-webkit-align-self": "center",
-              "align-self": "center",
-              ".hamburger span": {
-                "position": "absolute",
-                "right": "0",
-                "width": "30px",
-                "height": "2px",
-                "border-right": "5px",
-                "background-color": "@hamburgerColor",
-                "&:nth-child(1)": {
-                  "top": "0",
-                  "transition": "all 0.2s"
-                },
-                "&:nth-child(2)": {
-                  "top": "8px",
-                  "transition": "all 0.15s"
-                },
-                "&:nth-child(3)": {
-                  "top": "8px",
-                  "transition": "all 0.15s"
-                },
-                "&:nth-child(4)": {
-                  "top": "16px",
-                  "transition": "all 0.2s"
-                }
-              }
-            },
-            "nav.opened .navbar-toggler:not(.hide) .hamburger span": {
-              "&:nth-child(1)": {
-                "top": "8px",
-                "width": "0",
-                "opacity": "0",
-                "right": "50%",
-                "transition": "all 0.2s"
-              },
-              "&:nth-child(2)": {
-                "-webkit-transform": "rotate(45deg)",
-                "transform": "rotate(45deg)",
-                "transition": "all 0.25s"
-              },
-              "&:nth-child(3)": {
-                "-webkit-transform": "rotate(-45deg)",
-                "transform": "rotate(-45deg)",
-                "transition": "all 0.25s"
-              },
-              "&:nth-child(4)": {
-                "top": "8px",
-                "width": "0",
-                "opacity": "0",
-                "right": "50%",
-                "transition": "all 0.2s"
-              }
-            },
-            ".navbar-dropdown": {
-              "padding": "0.5rem 1rem",
-              "& when (@sticky)": {
-                "position": "fixed"
-              }
-            },
-            "a.nav-link": {
-              "display": "flex",
-              "-webkit-align-items": "center",
-              "align-items": "center",
-              "-webkit-justify-content": "center",
-              "justify-content": "center",
-              "letter-spacing": "2px"
-            },
-            ".nav-link, .dropdown-item": {
-              ".mbr-iconfont": {
-                "margin-right": "0.2rem"
-              }
-            },
-            ".ampstart-btn": {
-              "display": "flex",
-              "-webkit-align-self": "center",
-              "align-self": "center",
-              "&.hamburger": {
-                "position": "relative",
-                "right": "20px",
-                "margin-left": "auto",
-                "width": "30px",
-                "height": "20px",
-                "background": "none",
-                "border": "none",
-                "cursor": "pointer",
-                "z-index": "1000",
-                "&:focus": {
-                  "outline": "none"
-                },
-                "span": {
-                  "position": "absolute",
-                  "right": "0",
-                  "width": "30px",
-                  "height": "2px",
-                  "border-right": "5px",
-                  "background-color": "@hamburgerColor",
-                  "&:nth-child(1)": {
-                    "top": "0",
-                    "transition": "all 0.2s"
-                  },
-                  "&:nth-child(2)": {
-                    "top": "8px",
-                    "transition": "all 0.15s"
-                  },
-                  "&:nth-child(3)": {
-                    "top": "8px",
-                    "transition": "all 0.15s"
-                  },
-                  "&:nth-child(4)": {
-                    "top": "16px",
-                    "transition": "all 0.2s"
-                  }
-                }
-              }
-            },
-            "@media (min-width: 992px)": {
-              "& when not (@collapsed)": {
-                ".ampstart-btn, amp-sidebar": {
-                  "display": "none"
-                },
-                ".dropdown-menu .dropdown-toggle:after": {
-                  "content": "\"\"",
-                  "border-bottom": "0.35em solid transparent",
-                  "border-left": "0.35em solid",
-                  "border-right": "0",
-                  "border-top": "0.35em solid transparent",
-                  "margin-left": "0.3rem",
-                  "margin-top": "-0.3077em",
-                  "position": "absolute",
-                  "right": "1.1538em",
-                  "top": "50%"
-                }
-              }
-            },
-            "amp-sidebar": {
-              "min-width": "260px !important",
-              "z-index": "1050 !important",
-              "background-color": "@menuBgColor"
-            },
-            "amp-sidebar.open:after": {
-              "content": "\"\"",
-              "position": "absolute",
-              "top": "0",
-              "left": "0",
-              "bottom": "0",
-              "right": "0",
-              "background-color": "red"
-            },
-            ".open": {
-              "-webkit-transform": "translateX(0%) !important",
-              "transform": "translateX(0%) !important",
-              "display": "block !important"
-            },
-            ".builder-sidebar": {
-              "background-color": "@menuBgColor",
-              "position": "relative",
-              "min-height": "100vh",
-              "z-index": "1030",
-              "padding": "1rem 2rem",
-              "max-width": "20rem",
-              ".dropdown": {
-                "position": "relative",
-                "&:hover": {
-                  "& > .dropdown-menu": {
-                    "position": "relative",
-                    "text-align": "center"
-                  }
-                }
-              }
-            },
-            ".sidebar": {
-              "padding": "1rem 0",
-              "margin": "0"
-            },
-            ".sidebar > li": {
-              "list-style": "none",
-              "display": "flex",
-              "-webkit-flex-direction": "column",
-              "flex-direction": "column"
-            },
-            ".sidebar a": {
-              "display": "block",
-              "text-decoration": "none",
-              "margin-bottom": "10px"
-            },
-            ".close-sidebar": {
-              "width": "30px",
-              "height": "30px",
-              "position": "relative",
-              "cursor": "pointer",
-              "background-color": "transparent",
-              "border": "none",
-              "&:focus": {
-                "outline": "2px auto @primaryColor"
-              },
-              "span": {
-                "position": "absolute",
-                "left": "0",
-                "width": "30px",
-                "height": "2px",
-                "border-right": "5px",
-                "background-color": "@hamburgerColor",
-                "&:nth-child(1)": {
-                  "-webkit-transform": "rotate(45deg)",
-                  "transform": "rotate(45deg)"
-                },
-                "&:nth-child(2)": {
-                  "-webkit-transform": "rotate(-45deg)",
-                  "transform": "rotate(-45deg)"
-                }
-              }
-            },
-            "amp-img": {
-              "display": "flex",
-              "-webkit-align-items": "center",
-              "align-items": "center",
-              "width": "~\"@{logoWidth}px\"",
-              "@media (max-width: 768px)": {
-                "max-height": "55px",
-                "max-width": "55px"
-              }
-            }
-          },
-          "_name": "menu1",
-          "_customHTML": "<section class=\"menu horizontal-menu\" group=\"Menu\" plugins=\"DropDown, TouchSwipe, amp-main,amp-sidebar\" always-top global once=\"menu\" position-absolute>\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Show Logo\" name=\"showLogo\" checked>\n        <input type=\"range\" title=\"Logo Width\" inline name=\"logoWidth\" min=\"50\" max=\"120\" value=\"50\" step=\"1\" condition=\"showLogo\">\n        <input type=\"checkbox\" title=\"Show Brand Name\" name=\"showBrand\" checked>\n        <input type=\"checkbox\" title=\"Show Menu Items\" name=\"showItems\" checked>\n        <input type=\"checkbox\" title=\"Show Button(s)\" name=\"showButtons\" checked>\n        <input type=\"checkbox\" title=\"Sticky\" name=\"sticky\" checked>\n        <select title=\"Sidebar Side\" name=\"sidebarSide\">\n            <option value=\"left\">Left</option>\n            <option value=\"right\" selected>Right</option>\n        </select>\n        <input type=\"checkbox\" title=\"Collapsed\" name=\"collapsed\">\n        <input type=\"color\" title=\"Hamburger Color\" name=\"hamburgerColor\" value=\"#ffffff\">\n        <input type=\"color\" title=\"Background Color\" name=\"menuBgColor\" value=\"#0a57a2\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <nav class=\"navbar navbar-dropdown \" mbr-class=\"{'navbar-fixed-top':sticky,\n                     'navbar-expand-lg':!collapsed,\n                     'collapsed':collapsed}\">\n        <div class=\"container\">\n            <div class=\"navbar-brand\" mbr-if=\"showLogo || showBrand\">\n                <span mbr-if=\"showLogo\" class=\"navbar-logo\">\n                    <amp-img class=\"mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/logo-100x100.png\" layout=\"responsive\" width=\"50\" height=\"50\" alt=\"Mobirise\">\n                        <div placeholder class=\"placeholder\"></div>\n                        <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/logo-100x100.png\" alt=\"Mobirise\" title>\n                    </amp-img>\n                </span>\n                <span mbr-if=\"showBrand\" mbr-buttons mbr-theme-style=\"display-5\" class=\"navbar-caption-wrap\" data-toolbar=\"-mbrBtnMove,-mbrBtnAdd,-mbrBtnRemove\"><a class=\"navbar-caption text-white\" data-app-selector=\".navbar-caption\" href=\"index.html\" data-app-placeholder=\"Type Text\">\n                        <strong>242radio.com</strong>\n                    </a></span>\n            </div>\n            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n                <button class=\"navbar-toggler mb-2\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems||showButtons\">\n                    <div class=\"hamburger\">\n                        <span></span>\n                        <span></span>\n                        <span></span>\n                        <span></span>\n                    </div>\n                </button>\n                <ul mbr-menu class=\"navbar-nav nav-dropdown\" mbr-theme-style=\"display-7\" mbr-if=\"showItems\" mbr-class=\"{'nav-right': !showButtons,'navbar-nav-top-padding': isPublish && !showBrand && !showLogo}\">\n                    <li class=\"nav-item dropdown open\">\n                        <a class=\"nav-link link dropdown-toggle text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\" data-toggle=\"dropdown-submenu\" aria-expanded=\"true\">\n                            <strong>MENU</strong>\n                        </a>\n                        <div class=\"dropdown-menu\">\n                            <a class=\"dropdown-item text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">New Item</a>\n                            <a class=\"dropdown-item text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">New Item</a>\n                            <a class=\"text-white dropdown-item\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\" aria-expanded=\"false\">New Item</a>\n                        </div>\n                    </li>\n                    <li class=\"nav-item\">\n                        <a class=\"nav-link link text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">\n                            <strong>HOME</strong>\n                        </a>\n\n                    </li>\n                    <li class=\"nav-item\">\n                        <a class=\"nav-link link text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">\n                            <strong>SERVICES</strong>\n                        </a>\n                    </li>\n                    <li class=\"nav-item\">\n                        <a class=\"nav-link link text-white\" href=\"https://mobirise.com\" data-app-selector=\".nav-link,.dropdown-item\">\n                            <strong>ABOUT US</strong>\n                        </a>\n                    </li>\n                </ul>\n\n                <div mbr-if=\"showButtons\" mbr-buttons mbr-theme-style=\"display-7\" class=\"navbar-buttons mbr-section-btn\"><a class=\"btn btn-sm btn-secondary\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\">\n                        <strong>CONTACT US</strong>\n                    </a></div>\n            </div>\n            <button class=\"navbar-toggler hide\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarNavAltMarkup\" aria-expanded=\"false\" aria-label=\"Toggle navigation\" mbr-if=\"showItems||showButtons\">\n                <div class=\"hamburger\">\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                    <span></span>\n                </div>\n            </button>\n            <button on=\"tap:sidebar.toggle\" class=\"ampstart-btn hamburger\" mbr-class=\"{'sticky-but':sticky}\" mbr-if=\"showItems||showButtons\">\n                <span></span>\n                <span></span>\n                <span></span>\n                <span></span>\n            </button>\n\n        </div>\n    </nav>\n\n    <!-- AMP plug -->\n    <amp-sidebar id=\"sidebar\" layout=\"nodisplay\" side=\"{{sidebarSide}}\">\n        <div class=\"builder-sidebar\" id=\"builder-sidebar\">\n            <button on=\"tap:sidebar.close\" class=\"close-sidebar\">\n                <span></span>\n                <span></span>\n            </button>\n        </div>\n    </amp-sidebar>\n\n</section>",
-          "_cid": "rkB1T7m7XK",
-          "_anchor": "menu1-4",
-          "_protectedParams": [],
-          "_global": true,
-          "_once": "menu",
-          "_params": {}
-        },
-        {
-          "alias": false,
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value",
-              "& when (@gradient)": {
-                "background": "linear-gradient(135deg, @bg-value 0%, @bgcolor2 100%)"
-              }
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              "& when not (@overlayGradient)": {
-                ".mbr-overlay": {
-                  "background-color": "@overlayColor",
-                  "opacity": "@overlayOpacity"
-                }
-              },
-              "& when (@overlayGradient)": {
-                ".mbr-overlay": {
-                  "background": "linear-gradient(135deg, @overlayColor 0%, @ovcolor2 100%)",
-                  "opacity": "@overlayOpacity"
-                }
-              }
-            },
-            ".carousel-img": {
-              "width": "100%",
-              "text-align": "center",
-              "display": "flex",
-              "-webkit-justify-content": "center",
-              "justify-content": "center",
-              "-webkit-align-items": "center",
-              "align-items": "center"
-            },
-            ".amp-carousel-button": {
-              "width": "50px",
-              "height": "50px",
-              "border-radius": "50%"
-            },
-            "img.mbr-temp": {
-              "width": "auto"
+            ".lead": {
+              "color": "#93a3a7",
+              "font-style": "italic"
             },
             ".mbr-section-title": {
-              "& when not (@showSubTitle)": {
-                "padding-bottom": "2rem"
-              }
+              "font-family": "'Open Sans', sans-serif",
+              "googleLink": "https://fonts.googleapis.com/css?family=Open+Sans:400,300,700"
             },
-            "H2": {
-              "color": "#ffffff"
-            },
-            ".mbr-section-subtitle": {
-              "color": "#ffffff"
+            ".mbr-section-text": {
+              "color": "#ecf0f1",
+              "font-size": "18px"
             }
           },
-          "_name": "slider2",
-          "_customHTML": "<section class=\"slider2 slider\" group=\"Carousels &amp; Sliders\" plugins=\"amp-main,amp-carousel\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"checkbox\" title=\"Full Screen Bg\" name=\"fullScreen\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"2\" condition=\"fullScreen == false\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\">\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked=\"\">\n        <input type=\"checkbox\" title=\"Autoplay\" name=\"autoplay\" checked=\"\">\n        <input type=\"range\" inline=\"\" title=\"Delay\" name=\"delay\" min=\"1000\" max=\"5000\" step=\"1000\" value=\"5000\" condition=\"autoplay\">\n        <select title=\"Images\" name=\"imagesAmount\">\n            <option value=\"2\">2</option>\n            <option value=\"3\">3</option>\n            <option value=\"4\">4</option>\n            <option value=\"5\" selected=\"\">5</option>\n            <option value=\"6\">6</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#5fc7c6\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/logo-900x500-900x500.png\" selected=\"\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Background Gradient\" name=\"gradient\" condition=\"bg.type == 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Color 2\" name=\"bgcolor2\" value=\"#361291\" condition=\"gradient == true &amp;&amp; bg.type == 'color'\">\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay &amp;&amp; bg.type == 'image'\">\n        <input type=\"checkbox\" title=\"Overlay Gradient\" name=\"overlayGradient\" condition=\"overlay == true &amp;&amp; bg.type == 'image'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color 2\" name=\"ovcolor2\" value=\"#022e93\" condition=\"overlay == true &amp;&amp; overlayGradient == true &amp;&amp; bg.type == 'image'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"overlay &amp;&amp; bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <h2 mbr-if=\"showTitle\" class=\"mbr-section-title align-center mbr-fonts-style mbr-bold mbr-black\" mbr-theme-style=\"display-2\">Slider With Autoplay</h2>\n        <h3 mbr-if=\"showSubTitle\" data-app-selector=\".mbr-section-subtitle\" class=\"mbr-section-subtitle align-center mbr-light mbr-fonts-style mbr-black\" mbr-theme-style=\"display-6\">\n            Lorem ipsum dolor sit amet, consectetur adipisicing elit.\n        </h3>\n        <div class=\"slider-box\" data-autoplay=\"{{autoplay}}\" data-delay=\"{{delay}}\"><amp-carousel class=\"carousel\" height=\"9\" width=\"16\" layout=\"responsive\" type=\"slides\" loop=\"\"><amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/birds-150-638x404.jpg\" height=\"9\" width=\"14.212871287128714\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/birds-150-638x404.jpg\" alt=\"Mobirise\" title=\"\">\n                </amp-img><amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/cycle-151-638x403.jpg\" mbr-class=\"{'super-hide': imagesAmount < 2}\" height=\"9\" width=\"14.225806451612902\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/cycle-151-638x403.jpg\" alt=\"Mobirise\" title=\"\">\n                </amp-img><amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/silloette-150-638x403.jpg\" mbr-class=\"{'super-hide': imagesAmount < 3}\" height=\"9\" width=\"14.248138957816378\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/silloette-150-638x403.jpg\" alt=\"Mobirise\" title=\"\">\n                </amp-img><amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/swan-150-638x403.jpg\" mbr-class=\"{'super-hide': imagesAmount < 4}\" height=\"9\" width=\"14.248138957816378\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/swan-150-638x403.jpg\" alt=\"Mobirise\" title=\"\">\n                </amp-img><amp-img class=\"carousel-img mobirise-loader\" src=\"@PROJECT_PATH@/assets/images/frogs-150-638x403.jpg\" mbr-class=\"{'super-hide': imagesAmount < 5}\" height=\"9\" width=\"14.248138957816378\" layout=\"responsive\" alt=\"Mobirise\">\n                    <div placeholder=\"\" class=\"placeholder\"></div>\n                    <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/frogs-150-638x403.jpg\" alt=\"Mobirise\" title=\"\">\n                </amp-img></amp-carousel>\n            \n        </div>\n        <p class=\"mbr-text align-center mbr-fonts-style mbr-white\" mbr-if=\"showText\" mbr-theme-style=\"display-5\">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae cupiditate rerum ipsum tempora vero. Fugit facilis\n            possimus assumenda ipsa, sapiente eius sunt fuga saepe nemo. Necessitatibus consequuntur, recusandae consequatur\n            suscipit.\n        </p>\n        <div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons=\"\" mbr-theme-style=\"display-7\"><a class=\"btn btn-md btn-warning\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\">PLAY</a>\n                                        <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->\n[JS_CODE_0]\n[JS_CODE_1]\n<!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->\n            </div></div>\n</section>",
-          "_cid": "rkB18BSqyk",
-          "_anchor": "slider2-2",
+          "_params": {
+            "showTitle": true,
+            "showText": true,
+            "showButtons": false,
+            "buttonAlign": "right",
+            "showArrow": false,
+            "bgImageRadio": false,
+            "bgImage": "@THEME_PATH@/components/_images/header/01.jpg",
+            "parallax": true,
+            "bgColorRadio": false,
+            "bgColor": "#2c3e50",
+            "bgVideoRadio": true,
+            "bgVideo": {
+              "url": "https://www.youtube.com/watch?v=HnPYeBJ9JCc"
+            },
+            "overlay": false,
+            "overlayColor": "#2c3e50",
+            "overlayOpacity": "0"
+          },
+          "arrowDown": "@THEME_PATH@/components/_images/header/arrowDown.png",
+          "title": "Crystal FM<br>107.4<br>",
+          "text": "Community Radio for South Midlothian",
+          "buttons": "<a data-app-btn=\"true\" class=\"btn btn-primary btn-text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">learn more</a>",
+          "alias": "colorm/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "header1",
+          "_anchor": "header1-l"
+        },
+        {
+          "_params": {
+            "paddingTop": 1,
+            "paddingBottom": 1,
+            "bgColor": "#ffffff"
+          },
+          "text": "Listen to Crystal - Hit the play button",
+          "alias": "colorm/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "content1",
+          "_anchor": "content1-13",
+          "_customHTML": "<section class=\"mbr-section content1 article mbr-section__container\" data-rv-view=\"27\" style=\"background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;\">\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-xs-12\">\n                <p class=\"mbr-section-text lead mbr-editable-full\" code-editable-id=\"11\">Listen to Crystal - Hit the play button</p>\n                                <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->\n[JS_CODE_0]\n[JS_CODE_1]\n<!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->\n            </div>\n        </div>\n    </div>\n\n</section>",
           "_PHPplaceholders": [],
           "_JSplaceholders": [
             "<script type=\"text/javascript\" src=\"https://hosted.muses.org/mrp.js\"></script>",
-            "<script type=\"text/javascript\">\nMRP.insert({\n'url':'http://stream.audiospace.co/crystalradio',\n'codec':'mp3',\n'volume':90,\n'autoplay':false,\n'jsevents':true,\n'buffering':0,\n'title':'107.4 Crystal FM',\n'welcome':'Hello everyone',\n'wmode':'transparent',\n'skin':'faredirfare',\n'width':269,\n'height':52\n});\n</script>"
+            "<script type=\"text/javascript\">\nMRP.insert({\n'url':'http://stream.audiospace.co/crystalradio',\n'codec':'mp3',\n'volume':90,\n'autoplay':false,\n'jsevents':true,\n'buffering':0,\n'title':'107.4 Crystal FM',\n'welcome':'Hello everyone',\n'wmode':'transparent',\n'skin':'tiny',\n'width':269,\n'height':52\n});\n</script>"
           ],
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
+          "_customCSS": "P {\n  text-align: center;\n  font-size: 20px;\n}\n",
+          "_customTemplate": true
         },
         {
           "_styles": {
-            "padding-top": "(@paddingTop * 15px)",
-            "padding-bottom": "(@paddingBottom * 15px)",
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
+            ".mbr-section-title": {
+              "font-weight": "700",
+              "font-size": "36px",
+              "font-family": "'Noto Sans', sans-serif",
+              "googleLink": "https://fonts.googleapis.com/css?family=Noto+Sans:400,700"
             },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)"
+            ".mbr-section-subtitle": {
+              "text-transform": "uppercase",
+              "letter-spacing": "2px",
+              "color": "#fff"
             },
-            ".card": {
-              "margin-bottom": "3rem",
-              "position": "relative",
-              "display": "flex",
-              "-ms-flex-direction": "column",
-              "-webkit-flex-direction": "column",
-              "flex-direction": "column",
-              "min-width": "0",
-              "word-wrap": "break-word",
-              "background-clip": "border-box",
-              "border-radius": ".25rem",
-              "width": "100%",
-              "min-height": "1px",
-              "@media (min-width: 768px)": {
-                "padding-left": "1.5rem",
-                "padding-right": "1.5rem"
-              },
-              "@media (max-width: 767px)": {
-                "margin-bottom": "30px"
-              }
+            ".mbr-section-text": {
+              "text-align": "left",
+              "color": "#ecf0f1",
+              "font-family": "'Open Sans Condensed', sans-serif",
+              "googleLink": "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700",
+              "font-size": "17px"
             },
-            ".card-title": {
-              "margin": "0",
-              "color": "#04854e"
+            ".mbr-section-text I": {
+              "color": "#2ecc71"
             },
-            ".card-box": {
-              "padding-top": "2rem"
-            },
-            "amp-img": {
-              "width": "100%"
-            },
-            ".mbr-text": {
-              "color": "#767676"
-            },
-            ".mbr-row": {
-              "@media (min-width: 768px)": {
-                "margin-left": "-1.5rem",
-                "margin-right": "-1.5rem"
-              }
+            ".mbr-section-title SPAN": {
+              "font-size": "46px"
             }
           },
+          "_params": {
+            "showTitle": true,
+            "showImages": true,
+            "showTitles": true,
+            "ShowTexts": true,
+            "showButtons": false,
+            "paddingTop": "2",
+            "paddingBottom": "0",
+            "columns": 4,
+            "bgImageRadio": true,
+            "bgImage": "@PROJECT_PATH@/assets/images/03.jpg",
+            "parallax": true,
+            "bgColorRadio": false,
+            "bgColor": "#2c3e50",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": true,
+            "overlayColor": "#2c3e50",
+            "overlayOpacity": 0.9
+          },
+          "media1": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/itsmonday-431x285.jpg",
+              "class": "features-img",
+              "width": 600,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "iconFont": {
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "phone",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media2": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/02.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "edit",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media3": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/03.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "briefcase",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media4": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/04.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "linegraph",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media5": {
+            "image": {
+              "active": true,
+              "src": "@THEME_PATH@/components/_images/features/05.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "briefcase",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media6": {
+            "image": {
+              "active": true,
+              "src": "@THEME_PATH@/components/_images/features/06.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "linegraph",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "title": "<span style=\"font-weight: normal;\">PROGRAMME SCHEDULE\n</span>",
+          "title1": "Bootstrap 4",
+          "subtitle1": "MONDAY",
+          "caption1": "<b>12am</b> Heart Of The Matter\n<br><b>1am</b> Clutter Free\n<br><b>7am</b> Crystal Fusion with Colin McCall\n<br><b>9am</b> Norman Ross - Lets Get Together\n<br><b>10am</b> Ryan Sturrock, Hits and Rareties\n<br><b>12pm</b> Melodies for You - Ian Lees\n<br><b>2pm</b> Johnny Ward - Pentland Folk\n<br><b>3pm</b> World Music with David Arul\n<br><b>4pm</b> Great Destination - Kerri Jones\n<br><b>5pm</b> Tom’s Perfect Playlists\n<br><b>7pm</b> Crystal Blues with Eric Platten\n<br><b>8pm</b> Mix Tape by &nbsp;Steven Hedley\n<br><b>10pm</b> Sheriff’s &nbsp;Classic Tracks and/or<br>Atlantic Waves - Ray Nelson<br>",
+          "buttons1": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title2": "Responsive",
+          "subtitle2": "TUESDAY",
+          "caption2": "<b>12am</b> On Screen Off Screen - Movie reviews\n<br><b>1am</b> Clutter Free\n<br><b>7am</b> Colin McCall presents<br>Crystal Fusion\n<br><b>9am</b> Travel the Backroads with Lew Alpaugh\n<br><b>10am</b> It Could Be Jazz - with Doe\n<br><b>11am</b> Heart of the Matter \n<br><b>12pm</b> Sheriff’s Classic Tracks and or Atlantic Waves - Ray Nelson\n<br><b>2pm</b> Crystal Ceilidh  with Gordon\n<br><b>3pm</b> Ralph on the Radio\n<br><b>6pm</b> E-Tunes with Emma \n<br><b>7pm</b> Whats Up - with Trish and Zoe\n<br><b>9pm</b> Margaret’s Book Corner\n<br><b>10pm </b>Between the Tracks - Bionic Bob&nbsp;<br>",
+          "buttons2": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title3": "Web Fonts",
+          "subtitle3": "WEDNESDAY",
+          "caption3": "<b>12am</b> The Week in Holyrood - Charles Fletcher<br><b>4am</b> Dick Barrie, The Sunday Reflux<br><b><i>7am</i></b> C. W McCall Presents - Crystal Fusion\n<br><b>9am</b> The Week in Holyrood - Charles Fletcher\n<br><b>10am</b>  EPCD selections from - Eric Platten\n<br><b>12pm<i> </i></b>Great Destinations by Keri Jones\n<br><b>1pm</b> Lets Get Together with Norman Ross\n<br><b>2pm<i> </i></b>B - RAFF Show\n<br><b>4pm</b> Stafford's World via Mark Stafford\n<br><b>7pm<i> </i></b>Calum’s Music Hour\n<br><b>8pm</b> Rave on - Ryan Sturrock\n<br><b>10pm</b> Mark Snodgrass&nbsp;<br><b>12am<i> </i></b>Clutter free music<br>",
+          "buttons3": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title4": "Unlimited Sites",
+          "subtitle4": "THURSDAY",
+          "caption4": "<b>12am</b> Relaxing Radio with Business Bites from\nNik Martin, Alan Coote and Josh Alex\n<br><b>7am</b> Colin McCall Presents Crystal Fusion\n<br><b>9am</b> Margarets Book Corner\n<br><b>10am</b> Ryan Sturrock Introduces Hits &amp; Rarities\n<br><b>12pm</b> Tom’s Perfect Playlists\n<br><b>2pm<i> </i></b>Classical Call presented by David Arul\n<br><b>4pm</b> John Ward Presents Pentland Folk\n<br><b>5pm</b> Tea Time Tracks with Kevin Rafferty\n<br><b>7pm<i> </i></b> Ian's Musical Mix Up\n<br><b>9pm</b> Tyre Tracks with Mose\n<br><b>10pm</b> Could Be Jazz with Doe\n<br><b>11pm</b>  Folkal Point  with Colin MacDonald&nbsp;<br>",
+          "buttons4": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title5": "Trendy Website Blocks",
+          "subtitle5": "Choose from the large selection of blocks",
+          "caption5": "Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.",
+          "buttons5": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title6": "Host Anywhere",
+          "subtitle6": "Don't limit yourself to just one platform",
+          "caption6": "Publish your website to a local drive, FTP or host on Amazon S3, Google Drive, Github. Don't limit yourself to just one platform or service provider.",
+          "buttons6": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "alias": "colorm/components",
+          "_tags": [
+            "Theme"
+          ],
           "_name": "features1",
-          "_customHTML": "<section class=\"features1 mbr-section\" group=\"Features\" plugins=\"amp-main\">\n\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"2\">\n\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <select title=\"Cards\" name=\"cardsAmount\">\n            <option value=\"1\">1</option>\n            <option value=\"2\" selected>2</option>\n        </select>\n\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background2.jpg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    \n    <div class=\"container\">\n        <div class=\"mbr-row mbr-justify-content-center\">\n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/comet-1-760x570.jpg\" layout=\"responsive\" width=\"531.5811623246493\" height=\"437\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                            <div placeholder class=\"placeholder\"></div>\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/comet-1-760x570.jpg\" alt=\"Mobirise\" title>\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style align-left mbr-light\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            Why 242 ?</h4>\n                        <p class=\"mbr-text mbr-fonts-style align-left\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">Our name “242 Radio” came from an offshore radio station Radio Scotland 242. This Radio Station broadcast from the 1st January 1966 to 14th August 1967.\n<br>Radio Scotland 242 broadcast from a radio ship anchored in international waters off the coast of Scotland. They could be heard on 242 meters on the Medium Wave Band.\n<br>To honour this popular radio station from the 60’s who’s fate was sealed over 50 years ago we have adopted “242 Radio” as our name in remembrance of said station. From time to time we hope to recreate the sounds of these yesterday years.</p>\n                    </div>\n                </div>\n            </div>\n            \n            <div class=\"card mbr-col-sm-12 mbr-col-md-6\" mbr-if=\"cardsAmount > 1\">\n                <div class=\"card-wrapper\">\n                    <div class=\"card-img\">\n                        <amp-img src=\"@PROJECT_PATH@/assets/images/mbr-1062x596.jpg\" layout=\"responsive\" height=\"298\" width=\"531\" alt=\"Mobirise\" class=\"mobirise-loader\">\n                            <div placeholder class=\"placeholder\"></div>\n                            <img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/mbr-1062x596.jpg\" alt=\"Mobirise\" title>\n                        </amp-img>\n                    </div>\n                    <div class=\"card-box\">\n                        <h4 class=\"card-title mbr-fonts-style align-left mbr-light\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title\">\n                            Playing the music just for you</h4>\n                        <p class=\"mbr-text mbr-fonts-style align-left\" mbr-theme-style=\"display-6\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">We are 242 Radio, part of the 1 Alfa Bravo Communications group.\n<br>We bring you the best in music 24 hours a day on the world wide web via Apple, TuneIn radio, vTuner and all major streaming platforms.\n<br>You can contact 242 on studio@242radio.com and don't forget to follow us on Twitter (@242radiouk) and Facebook, where we have two pages...the 242 Radio Users Group and the official radio station page.\n<br>We are 242 Radio, swinging for you 24 hours a day from Scotland.</p>\n                    </div>\n                </div>\n            </div>\n            \n        </div>\n    </div>\n</section>",
-          "_anchor": "features1-3",
-          "_isUserblock": true,
-          "_sourceTheme": "mobirise-amp",
-          "_cid": "rkB1xCo82b",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
+          "_anchor": "features1-h"
+        },
+        {
+          "_styles": {
+            ".mbr-section-title": {
+              "font-weight": "700"
+            },
+            ".mbr-section-subtitle": {
+              "text-transform": "uppercase",
+              "letter-spacing": "2px",
+              "color": "#fff"
+            },
+            ".mbr-section-text": {
+              "text-align": "left",
+              "color": "#ecf0f1"
+            }
+          },
+          "_params": {
+            "showTitle": false,
+            "showImages": true,
+            "showTitles": true,
+            "ShowTexts": true,
+            "showButtons": false,
+            "paddingTop": "0",
+            "paddingBottom": "2",
+            "columns": "3",
+            "bgImageRadio": true,
+            "bgImage": "@PROJECT_PATH@/assets/images/03.jpg",
+            "parallax": true,
+            "bgColorRadio": false,
+            "bgColor": "#2c3e50",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": true,
+            "overlayColor": "#2c3e50",
+            "overlayOpacity": 0.9
+          },
+          "media1": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/itsfriday-425x285.jpg",
+              "class": "features-img",
+              "width": 600,
+              "link": "",
+              "alt": "",
+              "title": ""
+            },
+            "iconFont": {
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "phone",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media2": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/02.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "edit",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media3": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/03.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "briefcase",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media4": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/04.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "linegraph",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media5": {
+            "image": {
+              "active": true,
+              "src": "@THEME_PATH@/components/_images/features/05.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "briefcase",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "media6": {
+            "image": {
+              "active": true,
+              "src": "@THEME_PATH@/components/_images/features/06.jpg",
+              "class": "features-img",
+              "width": 600
+            },
+            "iconFont": {
+              "active": false,
+              "class": "mbr-iconfont mbr-iconfont-features4",
+              "name": "linegraph",
+              "link": "https://mobirise.com",
+              "size": 0,
+              "color": "#fff",
+              "family": "et-line"
+            }
+          },
+          "title": "Features",
+          "title1": "Bootstrap 4",
+          "subtitle1": "FRIDAY",
+          "caption1": "<b><i>12am </i></b>.. … Folkal Point continuous\n<br><b><i>1am</i></b> Clutter Free music<br><b><i>7am </i></b>Crystal Fusion  -  C.W . McCall\n<br><b><i>9am</i></b> On Screen! Off Screen! with Van Connor\n<br><b><i>10am</i></b> Folkal Point  with Colin MacDonald\n<br><b><i>12pm</i></b> Great Destination\n<br><b><i>1pm</i></b> Let's Get Together with Norman Ross\n<br><b><i>2pm</i></b> Crystal Generation with Ollie and Fraser\n<br><b><i>3pm</i></b> The Week In Holyrood\n<br><b><i>4pm</i></b> On the Weekend-Mike Marwick\n<br><b><i>6pm</i></b> Calum Anderson's Music Mix\n<br><b><i>7pm </i></b>Relaxing Radio &amp; Business Bites Show \n<br><b><i>9pm</i></b> Crystal Ceilidh with Gordon Young\n<br><i><b>10pm</b></i> The New Music Show by J. J. Kane\n<br><b><i>11pm</i></b> Travel the Backroads with Lew Alpaugh&nbsp;<br>",
+          "buttons1": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title2": "Responsive",
+          "subtitle2": "SATURDAY",
+          "caption2": "<b><i>12am</i></b> Classic Tracks or Atlantic Waves\n<br><b><i>2am</i></b> Clutter Free\n<br><b><i>7am</i></b>  Weekend With Eric\n<br><b><i>9am</i></b>  Bubbles introduced by Katie\n<br><b><i>10am</i></b> Whats Up - with Trish and Zoe \n<br><b><i>12pm</i></b> Let's Get Together,  Norman Ross\n<br><b><i>1pm</i></b>  Mix Tape from Steven Hedley\n<br><b><i>3pm</i></b> Pentland Folk with Johnny Ward\n<br><b><i>4pm</i></b> Crystal Generation namely Ollie &amp; Fraser\n<br><b><i>5pm</i></b> E Tunes  favourites  from Emma Hedley\n<br><b><i>6pm</i></b> Great Destinations with Keri Jones \n<br><b><i>7pm</i></b> Crystal Blues from Eric Platten\n<br><b><i>8pm</i></b> Bionic Boab - Between the Tracks\n<br><b><i>10pm</i></b> Mike Marwick with Rock n' Roll Saturday&nbsp;<br>",
+          "buttons2": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title3": "Web Fonts",
+          "subtitle3": "SUNDAY",
+          "caption3": "<b><i>12am</i></b> Stafford's World - Mark Stafford\n<br><b><i>3am</i></b> Clutter Free\n<br><b><i>7am</i></b> Weekend With Eric\n<br><b><i>10am</i></b> Travel the Backroads with Lew Alpaugh\n<br><b><i>11am</i></b> Heart of The Matter\n<br><b><i>12pm</i></b> Melodies for you with Ian Lees\n<br><b><i>2pm</i></b> Top 20 Hits from Rob Crossland\n<br><b><i>4pm</i></b> Dick Barrie on Sunday Afternoon\n<br><b><i>6pm</i></b> Paul Clark presents 60s Cult Weekend.\n<br><b><i>8pm</i></b> On the Weekend with Mike Marwick\n<br><b><i>10pm</i></b> The Folk and Roll Show, Ross Macfadyen&nbsp;<br>",
+          "buttons3": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title4": "Unlimited Sites",
+          "subtitle4": "Mobirise gives you the freedom to develop",
+          "caption4": "Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.",
+          "buttons4": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title5": "Trendy Website Blocks",
+          "subtitle5": "Choose from the large selection of blocks",
+          "caption5": "Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.",
+          "buttons5": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "title6": "Host Anywhere",
+          "subtitle6": "Don't limit yourself to just one platform",
+          "caption6": "Publish your website to a local drive, FTP or host on Amazon S3, Google Drive, Github. Don't limit yourself to just one platform or service provider.",
+          "buttons6": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
+          "alias": "colorm/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "features1",
+          "_anchor": "features1-i"
+        },
+        {
+          "_params": {
+            "showTitle": true,
+            "showSubtitle": true,
+            "rows": "2",
+            "bgItem1": "#f5f5f5",
+            "bgItem2": "#ffc80a",
+            "bgItem3": "#d2dde4",
+            "bgItem4": "#212121",
+            "paddingTop": "2",
+            "paddingBottom": "0",
+            "bgImageRadio": true,
+            "bgImage": "@PROJECT_PATH@/assets/images/pricing-table-bg.jpg",
+            "parallax": false,
+            "bgColorRadio": false,
+            "bgColor": "#ecf0f1",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "Our Team",
+          "subtitle": "Just some of the Crystal Presenters who help keep this radio station running 24/7\r",
+          "person1": "COLIN McCALL\n",
+          "person2": "DICK BARRIE\n",
+          "person3": "RYAN\n",
+          "person4": "JOHNNY WARD\r",
+          "subtitle1": "Monday - Friday 7-9am",
+          "subtitle2": "Sunday 4-6pm",
+          "subtitle3": "<div>RAVE ON! - Wednesdays 8 - 10pm\n</div><div>HITS AND RARITIES Monday &amp;Thursdays - 10am - 12 noon</div><div><br></div>",
+          "subtitle4": "Thursday 4pm &amp; Saturday 3pm",
+          "caption1": "Station anchor man Colin McCall\n<br>hosts The Crystal Fusion Show jammed pack with community\ninformation and news items that &nbsp;you may have missed, local weather\nand traffic information.\n<br>Featuring alternative music from\nthe norm, local bands, artists,\ninterviews and features.<br>",
+          "caption2": "Dick has enjoyed a long and successful radio career, working for BBC Scotland and Radio Clyde before spending 35 years with Radio Forth. He joined Crystal FM in June, 2014. His programmes have received several national and international awards. &nbsp;He was the first Scot to receive the (Nashville) CMA’s “International Broadcaster Award” (in 2000) and is a friend of many artistes and music industry professionals.\n<br>",
+          "caption3": "As long as I can remember, I have been a huge music fan - particularly Rock N Roll, Country Music, and Big Band / Swing - not the music usually associated with a 21 year old! (lol) HITS AND RARITIES Some of the biggest hits, mixed with some rare album tracks / B sides. You'll hear everything from Country, to Big Band, to Singer / Songwriters, and almost everything<br>in between.",
+          "caption4": "Originally from the Shetland Islands and now residing in Roslin. A retired teacher who has been involved in the entertainment profession on a part time basis for more than 40 years. This in the main involves performing music both with bands and individually in many different establishments.\"Pentland Folk\", &nbsp;a show which provides a wide variety of &nbsp;entertainment mainly belonging to the folk music category.",
+          "button1": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
+          "button2": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
+          "button3": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
+          "button4": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
+          "media1": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/face1.png",
+              "class": "features-img",
+              "width": 600,
+              "link": "",
+              "alt": "",
+              "title": ""
+            }
+          },
+          "media2": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/dick-b-434x486.jpg",
+              "class": "features-img",
+              "width": 600,
+              "link": "",
+              "alt": "Dick Barry",
+              "title": ""
+            }
+          },
+          "media3": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/ryan-434x486.jpg",
+              "class": "features-img",
+              "width": 600,
+              "link": "",
+              "alt": "",
+              "title": ""
+            }
+          },
+          "media4": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/johnny-w-434x486.jpg",
+              "class": "features-img",
+              "width": 600,
+              "link": "",
+              "alt": "",
+              "title": ""
+            }
+          },
+          "alias": "colorm/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "team1",
+          "_anchor": "team1-j",
+          "_styles": {
+            ".subtitle2 SPAN": {
+              "font-size": "12px"
+            },
+            ".subtitle1": {
+              "font-size": "12px"
+            },
+            ".subtitle3 DIV": {
+              "font-size": "12px"
+            },
+            ".subtitle2": {
+              "font-size": "12px"
+            },
+            ".subtitle4": {
+              "font-size": "12px"
+            }
+          }
+        },
+        {
+          "_params": {
+            "showTitle": false,
+            "showSubtitle": false,
+            "rows": "1",
+            "bgItem1": "#f5f5f5",
+            "bgItem2": "#ffc80a",
+            "bgItem3": "#d2dde4",
+            "bgItem4": "#212121",
+            "paddingTop": "0",
+            "paddingBottom": "0",
+            "bgImageRadio": false,
+            "bgImage": "@PROJECT_PATH@/assets/images/pricing-table-bg.jpg",
+            "parallax": false,
+            "bgColorRadio": true,
+            "bgColor": "#ecf0f1",
+            "bgVideoRadio": false,
+            "bgVideo": {
+              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
+            },
+            "overlay": false,
+            "overlayColor": "#222",
+            "overlayOpacity": 0.5
+          },
+          "title": "Our Team",
+          "subtitle": "This new-found knowledge may then be used by engineers to create new tools and machines.",
+          "person1": "Paul Clarke",
+          "person2": "Eric Platten",
+          "person3": "Barry Bostwick",
+          "person4": "Anna Cameron",
+          "subtitle1": "60’s CULT WEEKEND\n. Sunday 6pm",
+          "subtitle2": "Monday 7pm, Wednesday 10am<br>Saturday &amp; Sunday 7am",
+          "subtitle3": "DESIGNER",
+          "subtitle4": "PHOTOGRAPHER",
+          "caption1": "Clarky is a Veteran Radio Presenter and has Broadcast for many years. An Original Crystal FM presenter from the Stations commencement, Clarky's specialist 60s programme is a mix of Hits and Rarities featuring Pop,Northern Soul, Motown, Psych, Rock ‘n’ Roll, Reggae and much much more.",
+          "caption2": "Etc etc etc etc<br>now then<br>who why where",
+          "caption3": "In daily life, maybe you have so familiar with a number of daily necessities, well, do you .",
+          "caption4": "Every year more than four million traffic lights use an estimated three billion .",
+          "button1": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
+          "button2": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
+          "button3": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
+          "button4": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
+          "media1": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/paul-clarke-438x485.jpg",
+              "class": "features-img",
+              "width": 600,
+              "link": "",
+              "alt": "",
+              "title": ""
+            }
+          },
+          "media2": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/eric-platten-434x484.jpg",
+              "class": "features-img",
+              "width": 600,
+              "link": "",
+              "alt": "",
+              "title": ""
+            }
+          },
+          "media3": {
+            "image": {
+              "active": true,
+              "src": "@THEME_PATH@/components/_images/team/face3.png",
+              "class": "features-img",
+              "width": 600
+            }
+          },
+          "media4": {
+            "image": {
+              "active": true,
+              "src": "@THEME_PATH@/components/_images/team/face4.png",
+              "class": "features-img",
+              "width": 600
+            }
+          },
+          "alias": "colorm/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "team1",
+          "_anchor": "team1-k",
+          "_styles": {
+            ".subtitle1": {
+              "font-size": "12px"
+            },
+            ".subtitle2": {
+              "font-size": "12px"
+            }
+          }
+        },
+        {
+          "loadsvg": "@PROJECT_PATH@/assets/images/loading.svg",
+          "_params": {
+            "paddingTop": 0,
+            "paddingBottom": 0,
+            "postToLoad": 3,
+            "facebook": "http://facebook.com/CrystalFMPenicuik",
+            "twitter": "https://twitter.com/crystalfmradio",
+            "google": "",
+            "youtube": "",
+            "bgColorRadio": true,
+            "bgColor": "#fff",
+            "bgImageRadio": false,
+            "bgImage": "@ADDONS_PATH@/social-feed/feed/assets/comments_bg.jpg",
+            "overlay": true,
+            "overlayColor": "#7e9b9f",
+            "overlayOpacity": 0.6
+          },
+          "alias": "social-feed",
+          "_tags": [
+            "Extension"
+          ],
+          "_name": "feed",
+          "_anchor": "feed-s"
+        }
+      ]
+    },
+    "page1.html": {
+      "settings": {
+        "title": "Page 1",
+        "order": 2
+      },
+      "components": [
+        {
+          "_styles": {
+            ".hide-buttons .nav-btn": {
+              "display": "none !important"
+            },
+            ".navbar-caption": {
+              "color": "#ffffff"
+            },
+            ".navbar-toggler": {
+              "color": "#ffffff"
+            },
+            ".close-icon::before, .close-icon::after": {
+              "background-color": "#ffffff"
+            },
+            ".link, .dropdown-item": {
+              "color": "#ffffff"
+            },
+            ".link": {
+              "font-size": "1.15rem"
+            },
+            ".dropdown-item, .nav-dropdown-sm .link": {
+              "font-size": "1.245rem"
+            },
+            ".link:hover, .link:focus": {
+              "color": "@primaryColor"
+            },
+            ".dropdown-item:hover::before, .dropdown-item:focus::before": {
+              "background": "@primaryColor"
+            },
+            ".dropdown-item:hover, .dropdown-item:focus": {
+              "color": "#ffffff"
+            },
+            ".link[aria-expanded=\"true\"], .dropdown-menu": {
+              "background": "#061d4d"
+            },
+            ".nav-dropdown-sm .link:focus, .nav-dropdown-sm .link:hover, .nav-dropdown-sm .dropdown-item:focus, .nav-dropdown-sm .dropdown-item:hover": {
+              "background": "#092a6e!important"
+            },
+            ".navbar, .nav-dropdown-sm, .nav-dropdown-sm .link[aria-expanded=\"true\"], .nav-dropdown-sm .dropdown-menu": {
+              "background": "#0a2f7c"
+            },
+            ".bg-color.transparent .link": {
+              "color": "#ffffff",
+              "transition": "none"
+            },
+            ".bg-color.transparent.opened .link": {
+              "transition": "color .2s ease-in-out"
+            },
+            ".bg-color.transparent.opened .link:hover, .bg-color.transparent.opened .link:focus": {
+              "color": "@primaryColor"
+            },
+            ".link[aria-expanded=\"true\"], .dropdown-item[aria-expanded=\"true\"]": {
+              "color": "#f39c12!important"
+            }
+          },
+          "_params": {
+            "logo": true,
+            "showBrand": false,
+            "hideButtons": true,
+            "sticky": true,
+            "collapsed": true,
+            "transparent": false,
+            "bgColor": "#0a2f7c",
+            "fontSize": "1.15",
+            "fontName": {},
+            "fontColor": "#ffffff",
+            "fontHoverColor": "@primaryColor"
+          },
+          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"https://mobirise.com/\">OVERVIEW</a></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\">FEATURES</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile friendly</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Based on Bootstrap</a><div class=\"dropdown\"><a data-app-btn=\"true\" class=\"dropdown-item dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\">Trendy blocks</a><div class=\"dropdown-menu dropdown-submenu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image/content slider</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact forms</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image gallery</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile menu</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google maps</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Social buttons</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google fonts</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Video background</a></div></div><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Host anywhere</a></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\">HELP</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"http://forums.mobirise.com/\">Forum</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Tutorials</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact us</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-white btn-white-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
+          "logo": {
+            "image": {
+              "active": true,
+              "src": "@PROJECT_PATH@/assets/images/logo-450px-139x128.jpg",
+              "height": 128,
+              "alt": "Mobirise",
+              "link": "https://mobirise.com",
+              "title": ""
+            },
+            "iconFont": {
+              "class": "mbr-iconfont mbr-iconfont-menu",
+              "link": "https://mobirise.com",
+              "size": 0
+            }
+          },
+          "brand": "<a class=\"navbar-caption\" data-app-btn=\"true\" data-app-selector=\".navbar-caption\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Brand Name\">MOBIRISE</a>",
+          "alias": "colorm/components",
+          "_tags": [
+            "Theme"
+          ],
+          "_name": "menu",
+          "_anchor": "menu-9"
         }
       ]
     }
