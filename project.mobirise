@@ -1,47 +1,45 @@
 {
   "settings": {
-    "name": "Crystal FM Dec 2018",
+    "name": "Site-10-28_1609",
     "currentPage": "index.html",
     "theme": {
-      "name": "colorm",
-      "title": "ColorM",
+      "name": "appamp",
+      "title": "AppAMP",
       "styling": {
-        "primaryColor": "#f39c12",
-        "buttonsColor": "#000000",
-        "secondaryColor": "#9b59b6",
-        "successColor": "#2ecc71",
-        "infoColor": "#3498db",
-        "warningColor": "#f1c40f",
-        "dangerColor": "#e74c3c",
-        "titleFont": "Roboto",
-        "subtitleFont": "Arimo",
-        "textFont": "Open Sans",
-        "isRoundedButtons": true,
-        "isAnimatedOnScroll": true,
-        "isScrollToTopButton": false
-      },
-      "additionalSetColors": [
-        "#0a2f7c"
-      ]
+        "primaryColor": "#6278df",
+        "secondaryColor": "#e577f8",
+        "successColor": "#13c9d9",
+        "infoColor": "#5ba533",
+        "warningColor": "#465052",
+        "dangerColor": "#b2ccd2",
+        "mainFont": "Work Sans",
+        "display1Font": "Work Sans",
+        "display1Size": 3.6,
+        "display2Font": "Work Sans",
+        "display2Size": 2.8,
+        "display5Font": "Work Sans",
+        "display5Size": 1.6,
+        "display7Font": "Work Sans",
+        "display7Size": 1.3,
+        "display4Font": "Work Sans",
+        "display4Size": 1,
+        "isRoundedButtons": false,
+        "isScrollToTopButton": false,
+        "arrowColor": "#6278df"
+      }
     },
     "path": "@PROJECT_PATH@",
-    "versionFirst": "4.8.8",
+    "versionFirst": "4.11.4",
     "siteFonts": [],
-    "favicon": "",
-    "noImageResize": "",
-    "siteUrl": "undefined",
-    "cookiesAlert": "",
-    "gdpr": "",
-    "google-analytics": "",
-    "uniqCompNum": 40,
-    "versionPublish": "4.9.6",
+    "uniqCompNum": 3,
+    "versionPublish": "4.11.4",
     "screenshot": "screenshot.png"
   },
   "pages": {
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Welcome to the Crystal FM Website",
+        "title": "Home",
         "meta_descr": "",
         "header_custom": "",
         "footer_custom": "",
@@ -49,759 +47,57 @@
       },
       "components": [
         {
+          "alias": false,
           "_styles": {
-            ".lead": {
-              "color": "#93a3a7",
-              "font-style": "italic"
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
             },
-            ".mbr-section-title": {
-              "font-family": "'Open Sans', sans-serif",
-              "googleLink": "https://fonts.googleapis.com/css?family=Open+Sans:400,300,700"
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
             },
-            ".mbr-section-text": {
-              "color": "#ecf0f1",
-              "font-size": "18px"
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            ".btn-white": {
+              "&:hover": {
+                "background": "@primaryColor !important",
+                "border": "2px solid @primaryColor !important",
+                "color": "white !important"
+              }
             }
           },
-          "_params": {
-            "showTitle": true,
-            "showText": true,
-            "showButtons": false,
-            "buttonAlign": "right",
-            "showArrow": false,
-            "bgImageRadio": false,
-            "bgImage": "@THEME_PATH@/components/_images/header/01.jpg",
-            "parallax": true,
-            "bgColorRadio": false,
-            "bgColor": "#2c3e50",
-            "bgVideoRadio": true,
-            "bgVideo": {
-              "url": "https://www.youtube.com/watch?v=HnPYeBJ9JCc"
-            },
-            "overlay": false,
-            "overlayColor": "#2c3e50",
-            "overlayOpacity": "0"
-          },
-          "arrowDown": "@THEME_PATH@/components/_images/header/arrowDown.png",
-          "title": "Crystal FM<br>107.4<br>",
-          "text": "Community Radio for South Midlothian",
-          "buttons": "<a data-app-btn=\"true\" class=\"btn btn-primary btn-text\" href=\"https://mobirise.com\" data-toolbar=\"-mbrBtnMove\">learn more</a>",
-          "alias": "colorm/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "header1",
-          "_anchor": "header1-l"
+          "_name": "header5",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" mbr-class=\"{'mbr-fullscreen': fullScreen}\" plugins=\"amp-main\">\n    <mbr-parameters>\n        <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n        <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"15\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"15\" step=\"1\" value=\"8\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" name=\"halfSize\" title=\"Half Size\">\n        <select title=\"Align\" name=\"alignHalf\" condition=\"halfSize\">\n            <option value=\"1\">Left</option>\n            <option value=\"2\" selected=\"\">Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked=\"\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\">\n        <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\" checked=\"\">\n        <select title=\"Align\" name=\"alignTitle\" condition=\"showTitle || showSubtitle || showText || showButtons\">\n            <option value=\"1\" selected=\"\">Left</option>\n            <option value=\"2\">Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Background Image\" value=\"../_images/background1.jpg\" selected=\"\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked=\"\">\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <input type=\"range\" inline=\"\" title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.4\" condition=\"overlay &amp;&amp; bg.type !== 'color'\">\n        <!-- End block parameters -->\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\"></div>\n    <div mbr-class=\"{'container':!fullWidth,\n                     'container-fluid': fullWidth}\">\n        <div class=\"mbr-row\" mbr-class=\"{'align-left': alignTitle==1,\n                        'align-center': alignTitle==2,\n                        'align-right': alignTitle==3,\n                        'mbr-jc-c':alignHalf==2,\n                        'mbr-jc-e':alignHalf==3}\" mbr-if=\"showTitle || showSubtitle || showText || showButtons\">\n            <div class=\"title-block mbr-col-sm-12 mbr-col-md-12\" mbr-class=\"{'mbr-col-lg-6': halfSize,\n                             'mbr-col-lg-12': !halfSize}\">\n                <h1 class=\"mbr-section-title mbr-fonts-style align-center mbr-regular mbr-white mbr-pb-1\" mbr-theme-style=\"display-5\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-title, .mbr-section-btn\">\n                    Lorem ipsum dolor sit amet, consectetur adipisicing\n                </h1>\n                <h2 class=\"mbr-section-subtitle mbr-fonts-style align-center  mbr-white mbr-bold mbr-pb-1\" mbr-class=\"{'mbr-pt-4': showTitle}\" mbr-theme-style=\"display-1\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle, .mbr-section-btn\">Our\n                    application will change your life</h2>\n                <p class=\"mbr-text mbr-fonts-style align-center mbr-white mbr-light\" mbr-class=\"{'mbr-pt-3': showTitle || showSubtitle}\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-section-btn, .mbr-text\">Lorem\n                    ipsum dolor sit amet, consectetur adipisicing elit. Molestias, maxime. Minus, mollitia dolorem\n                    corrupti expedita.</p>\n                <div mbr-buttons=\"\" class=\"mbr-section-btn align-center\" mbr-class=\"{'mbr-pt-4':showSubtitle||showTitle||showText}\" mbr-theme-style=\"display-7\" data-toolbar=\"-mbrBtnMove\" mbr-if=\"showButtons\"><a class=\"btn btn-white\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Text\">Get App for Free</a></div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "rGdcvihfiI",
+          "_anchor": "header5-0",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
         },
         {
-          "_params": {
-            "paddingTop": 1,
-            "paddingBottom": 1,
-            "bgColor": "#ffffff"
-          },
-          "text": "Listen to Crystal - Hit the play button",
-          "alias": "colorm/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "content1",
-          "_anchor": "content1-13",
-          "_customHTML": "<section class=\"mbr-section content1 article mbr-section__container\" data-rv-view=\"27\" style=\"background-color: rgb(255, 255, 255); padding-top: 20px; padding-bottom: 20px;\">\n\n    <div class=\"container\">\n        <div class=\"row\">\n            <div class=\"col-xs-12\">\n                <p class=\"mbr-section-text lead mbr-editable-full\" code-editable-id=\"11\">Listen to Crystal - Hit the play button</p>\n                                <!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->\n[JS_CODE_0]\n[JS_CODE_1]\n<!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->\n            </div>\n        </div>\n    </div>\n\n</section>",
-          "_PHPplaceholders": [],
-          "_JSplaceholders": [
-            "<script type=\"text/javascript\" src=\"https://hosted.muses.org/mrp.js\"></script>",
-            "<script type=\"text/javascript\">\nMRP.insert({\n'url':'http://stream.audiospace.co/crystalradio',\n'codec':'mp3',\n'volume':90,\n'autoplay':false,\n'jsevents':true,\n'buffering':0,\n'title':'107.4 Crystal FM',\n'welcome':'Hello everyone',\n'wmode':'transparent',\n'skin':'tiny',\n'width':269,\n'height':52\n});\n</script>"
-          ],
-          "_customCSS": "P {\n  text-align: center;\n  font-size: 20px;\n}\n",
-          "_customTemplate": true
-        },
-        {
-          "_styles": {
-            ".mbr-section-title": {
-              "font-weight": "700",
-              "font-size": "36px",
-              "font-family": "'Noto Sans', sans-serif",
-              "googleLink": "https://fonts.googleapis.com/css?family=Noto+Sans:400,700"
-            },
-            ".mbr-section-subtitle": {
-              "text-transform": "uppercase",
-              "letter-spacing": "2px",
-              "color": "#fff"
-            },
-            ".mbr-section-text": {
-              "text-align": "left",
-              "color": "#ecf0f1",
-              "font-family": "'Open Sans Condensed', sans-serif",
-              "googleLink": "https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700",
-              "font-size": "17px"
-            },
-            ".mbr-section-text I": {
-              "color": "#2ecc71"
-            },
-            ".mbr-section-title SPAN": {
-              "font-size": "46px"
-            }
-          },
-          "_params": {
-            "showTitle": true,
-            "showImages": true,
-            "showTitles": true,
-            "ShowTexts": true,
-            "showButtons": false,
-            "paddingTop": "2",
-            "paddingBottom": "0",
-            "columns": 4,
-            "bgImageRadio": true,
-            "bgImage": "@PROJECT_PATH@/assets/images/03.jpg",
-            "parallax": true,
-            "bgColorRadio": false,
-            "bgColor": "#2c3e50",
-            "bgVideoRadio": false,
-            "bgVideo": {
-              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
-            },
-            "overlay": true,
-            "overlayColor": "#2c3e50",
-            "overlayOpacity": 0.9
-          },
-          "media1": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/itsmonday-431x285.jpg",
-              "class": "features-img",
-              "width": 600,
-              "link": "",
-              "alt": "",
-              "title": ""
-            },
-            "iconFont": {
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "phone",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media2": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/02.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "edit",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media3": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/03.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "briefcase",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media4": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/04.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "linegraph",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media5": {
-            "image": {
-              "active": true,
-              "src": "@THEME_PATH@/components/_images/features/05.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "briefcase",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media6": {
-            "image": {
-              "active": true,
-              "src": "@THEME_PATH@/components/_images/features/06.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "linegraph",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "title": "<span style=\"font-weight: normal;\">PROGRAMME SCHEDULE\n</span>",
-          "title1": "Bootstrap 4",
-          "subtitle1": "MONDAY",
-          "caption1": "<b>12am</b> Heart Of The Matter\n<br><b>1am</b> Clutter Free\n<br><b>7am</b> Crystal Fusion with Colin McCall\n<br><b>9am</b> Norman Ross - Lets Get Together\n<br><b>10am</b> Ryan Sturrock, Hits and Rareties\n<br><b>12pm</b> Melodies for You - Ian Lees\n<br><b>2pm</b> Johnny Ward - Pentland Folk\n<br><b>3pm</b> World Music with David Arul\n<br><b>4pm</b> Great Destination - Kerri Jones\n<br><b>5pm</b> Tom’s Perfect Playlists\n<br><b>7pm</b> Crystal Blues with Eric Platten\n<br><b>8pm</b> Mix Tape by &nbsp;Steven Hedley\n<br><b>10pm</b> Sheriff’s &nbsp;Classic Tracks and/or<br>Atlantic Waves - Ray Nelson<br>",
-          "buttons1": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title2": "Responsive",
-          "subtitle2": "TUESDAY",
-          "caption2": "<b>12am</b> On Screen Off Screen - Movie reviews\n<br><b>1am</b> Clutter Free\n<br><b>7am</b> Colin McCall presents<br>Crystal Fusion\n<br><b>9am</b> Travel the Backroads with Lew Alpaugh\n<br><b>10am</b> It Could Be Jazz - with Doe\n<br><b>11am</b> Heart of the Matter \n<br><b>12pm</b> Sheriff’s Classic Tracks and or Atlantic Waves - Ray Nelson\n<br><b>2pm</b> Crystal Ceilidh  with Gordon\n<br><b>3pm</b> Ralph on the Radio\n<br><b>6pm</b> E-Tunes with Emma \n<br><b>7pm</b> Whats Up - with Trish and Zoe\n<br><b>9pm</b> Margaret’s Book Corner\n<br><b>10pm </b>Between the Tracks - Bionic Bob&nbsp;<br>",
-          "buttons2": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title3": "Web Fonts",
-          "subtitle3": "WEDNESDAY",
-          "caption3": "<b>12am</b> The Week in Holyrood - Charles Fletcher<br><b>4am</b> Dick Barrie, The Sunday Reflux<br><b><i>7am</i></b> C. W McCall Presents - Crystal Fusion\n<br><b>9am</b> The Week in Holyrood - Charles Fletcher\n<br><b>10am</b>  EPCD selections from - Eric Platten\n<br><b>12pm<i> </i></b>Great Destinations by Keri Jones\n<br><b>1pm</b> Lets Get Together with Norman Ross\n<br><b>2pm<i> </i></b>B - RAFF Show\n<br><b>4pm</b> Stafford's World via Mark Stafford\n<br><b>7pm<i> </i></b>Calum’s Music Hour\n<br><b>8pm</b> Rave on - Ryan Sturrock\n<br><b>10pm</b> Mark Snodgrass&nbsp;<br><b>12am<i> </i></b>Clutter free music<br>",
-          "buttons3": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title4": "Unlimited Sites",
-          "subtitle4": "THURSDAY",
-          "caption4": "<b>12am</b> Relaxing Radio with Business Bites from\nNik Martin, Alan Coote and Josh Alex\n<br><b>7am</b> Colin McCall Presents Crystal Fusion\n<br><b>9am</b> Margarets Book Corner\n<br><b>10am</b> Ryan Sturrock Introduces Hits &amp; Rarities\n<br><b>12pm</b> Tom’s Perfect Playlists\n<br><b>2pm<i> </i></b>Classical Call presented by David Arul\n<br><b>4pm</b> John Ward Presents Pentland Folk\n<br><b>5pm</b> Tea Time Tracks with Kevin Rafferty\n<br><b>7pm<i> </i></b> Ian's Musical Mix Up\n<br><b>9pm</b> Tyre Tracks with Mose\n<br><b>10pm</b> Could Be Jazz with Doe\n<br><b>11pm</b>  Folkal Point  with Colin MacDonald&nbsp;<br>",
-          "buttons4": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title5": "Trendy Website Blocks",
-          "subtitle5": "Choose from the large selection of blocks",
-          "caption5": "Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.",
-          "buttons5": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title6": "Host Anywhere",
-          "subtitle6": "Don't limit yourself to just one platform",
-          "caption6": "Publish your website to a local drive, FTP or host on Amazon S3, Google Drive, Github. Don't limit yourself to just one platform or service provider.",
-          "buttons6": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "alias": "colorm/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "features1",
-          "_anchor": "features1-h"
-        },
-        {
-          "_styles": {
-            ".mbr-section-title": {
-              "font-weight": "700"
-            },
-            ".mbr-section-subtitle": {
-              "text-transform": "uppercase",
-              "letter-spacing": "2px",
-              "color": "#fff"
-            },
-            ".mbr-section-text": {
-              "text-align": "left",
-              "color": "#ecf0f1"
-            }
-          },
-          "_params": {
-            "showTitle": false,
-            "showImages": true,
-            "showTitles": true,
-            "ShowTexts": true,
-            "showButtons": false,
-            "paddingTop": "0",
-            "paddingBottom": "2",
-            "columns": "3",
-            "bgImageRadio": true,
-            "bgImage": "@PROJECT_PATH@/assets/images/03.jpg",
-            "parallax": true,
-            "bgColorRadio": false,
-            "bgColor": "#2c3e50",
-            "bgVideoRadio": false,
-            "bgVideo": {
-              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
-            },
-            "overlay": true,
-            "overlayColor": "#2c3e50",
-            "overlayOpacity": 0.9
-          },
-          "media1": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/itsfriday-425x285.jpg",
-              "class": "features-img",
-              "width": 600,
-              "link": "",
-              "alt": "",
-              "title": ""
-            },
-            "iconFont": {
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "phone",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media2": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/02.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "edit",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media3": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/03.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "briefcase",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media4": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/04.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "linegraph",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media5": {
-            "image": {
-              "active": true,
-              "src": "@THEME_PATH@/components/_images/features/05.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "briefcase",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "media6": {
-            "image": {
-              "active": true,
-              "src": "@THEME_PATH@/components/_images/features/06.jpg",
-              "class": "features-img",
-              "width": 600
-            },
-            "iconFont": {
-              "active": false,
-              "class": "mbr-iconfont mbr-iconfont-features4",
-              "name": "linegraph",
-              "link": "https://mobirise.com",
-              "size": 0,
-              "color": "#fff",
-              "family": "et-line"
-            }
-          },
-          "title": "Features",
-          "title1": "Bootstrap 4",
-          "subtitle1": "FRIDAY",
-          "caption1": "<b><i>12am </i></b>.. … Folkal Point continuous\n<br><b><i>1am</i></b> Clutter Free music<br><b><i>7am </i></b>Crystal Fusion  -  C.W . McCall\n<br><b><i>9am</i></b> On Screen! Off Screen! with Van Connor\n<br><b><i>10am</i></b> Folkal Point  with Colin MacDonald\n<br><b><i>12pm</i></b> Great Destination\n<br><b><i>1pm</i></b> Let's Get Together with Norman Ross\n<br><b><i>2pm</i></b> Crystal Generation with Ollie and Fraser\n<br><b><i>3pm</i></b> The Week In Holyrood\n<br><b><i>4pm</i></b> On the Weekend-Mike Marwick\n<br><b><i>6pm</i></b> Calum Anderson's Music Mix\n<br><b><i>7pm </i></b>Relaxing Radio &amp; Business Bites Show \n<br><b><i>9pm</i></b> Crystal Ceilidh with Gordon Young\n<br><i><b>10pm</b></i> The New Music Show by J. J. Kane\n<br><b><i>11pm</i></b> Travel the Backroads with Lew Alpaugh&nbsp;<br>",
-          "buttons1": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title2": "Responsive",
-          "subtitle2": "SATURDAY",
-          "caption2": "<b><i>12am</i></b> Classic Tracks or Atlantic Waves\n<br><b><i>2am</i></b> Clutter Free\n<br><b><i>7am</i></b>  Weekend With Eric\n<br><b><i>9am</i></b>  Bubbles introduced by Katie\n<br><b><i>10am</i></b> Whats Up - with Trish and Zoe \n<br><b><i>12pm</i></b> Let's Get Together,  Norman Ross\n<br><b><i>1pm</i></b>  Mix Tape from Steven Hedley\n<br><b><i>3pm</i></b> Pentland Folk with Johnny Ward\n<br><b><i>4pm</i></b> Crystal Generation namely Ollie &amp; Fraser\n<br><b><i>5pm</i></b> E Tunes  favourites  from Emma Hedley\n<br><b><i>6pm</i></b> Great Destinations with Keri Jones \n<br><b><i>7pm</i></b> Crystal Blues from Eric Platten\n<br><b><i>8pm</i></b> Bionic Boab - Between the Tracks\n<br><b><i>10pm</i></b> Mike Marwick with Rock n' Roll Saturday&nbsp;<br>",
-          "buttons2": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title3": "Web Fonts",
-          "subtitle3": "SUNDAY",
-          "caption3": "<b><i>12am</i></b> Stafford's World - Mark Stafford\n<br><b><i>3am</i></b> Clutter Free\n<br><b><i>7am</i></b> Weekend With Eric\n<br><b><i>10am</i></b> Travel the Backroads with Lew Alpaugh\n<br><b><i>11am</i></b> Heart of The Matter\n<br><b><i>12pm</i></b> Melodies for you with Ian Lees\n<br><b><i>2pm</i></b> Top 20 Hits from Rob Crossland\n<br><b><i>4pm</i></b> Dick Barrie on Sunday Afternoon\n<br><b><i>6pm</i></b> Paul Clark presents 60s Cult Weekend.\n<br><b><i>8pm</i></b> On the Weekend with Mike Marwick\n<br><b><i>10pm</i></b> The Folk and Roll Show, Ross Macfadyen&nbsp;<br>",
-          "buttons3": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title4": "Unlimited Sites",
-          "subtitle4": "Mobirise gives you the freedom to develop",
-          "caption4": "Mobirise gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.",
-          "buttons4": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title5": "Trendy Website Blocks",
-          "subtitle5": "Choose from the large selection of blocks",
-          "caption5": "Choose from the large selection of latest pre-made blocks - jumbotrons, hero images, parallax scrolling, video backgrounds, hamburger menu, sticky header and more.",
-          "buttons5": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "title6": "Host Anywhere",
-          "subtitle6": "Don't limit yourself to just one platform",
-          "caption6": "Publish your website to a local drive, FTP or host on Amazon S3, Google Drive, Github. Don't limit yourself to just one platform or service provider.",
-          "buttons6": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary\">learn more</a>",
-          "alias": "colorm/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "features1",
-          "_anchor": "features1-i"
-        },
-        {
-          "_params": {
-            "showTitle": true,
-            "showSubtitle": true,
-            "rows": "2",
-            "bgItem1": "#f5f5f5",
-            "bgItem2": "#ffc80a",
-            "bgItem3": "#d2dde4",
-            "bgItem4": "#212121",
-            "paddingTop": "2",
-            "paddingBottom": "0",
-            "bgImageRadio": true,
-            "bgImage": "@PROJECT_PATH@/assets/images/pricing-table-bg.jpg",
-            "parallax": false,
-            "bgColorRadio": false,
-            "bgColor": "#ecf0f1",
-            "bgVideoRadio": false,
-            "bgVideo": {
-              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
-            },
-            "overlay": false,
-            "overlayColor": "#222",
-            "overlayOpacity": 0.5
-          },
-          "title": "Our Team",
-          "subtitle": "Just some of the Crystal Presenters who help keep this radio station running 24/7\r",
-          "person1": "COLIN McCALL\n",
-          "person2": "DICK BARRIE\n",
-          "person3": "RYAN\n",
-          "person4": "JOHNNY WARD\r",
-          "subtitle1": "Monday - Friday 7-9am",
-          "subtitle2": "Sunday 4-6pm",
-          "subtitle3": "<div>RAVE ON! - Wednesdays 8 - 10pm\n</div><div>HITS AND RARITIES Monday &amp;Thursdays - 10am - 12 noon</div><div><br></div>",
-          "subtitle4": "Thursday 4pm &amp; Saturday 3pm",
-          "caption1": "Station anchor man Colin McCall\n<br>hosts The Crystal Fusion Show jammed pack with community\ninformation and news items that &nbsp;you may have missed, local weather\nand traffic information.\n<br>Featuring alternative music from\nthe norm, local bands, artists,\ninterviews and features.<br>",
-          "caption2": "Dick has enjoyed a long and successful radio career, working for BBC Scotland and Radio Clyde before spending 35 years with Radio Forth. He joined Crystal FM in June, 2014. His programmes have received several national and international awards. &nbsp;He was the first Scot to receive the (Nashville) CMA’s “International Broadcaster Award” (in 2000) and is a friend of many artistes and music industry professionals.\n<br>",
-          "caption3": "As long as I can remember, I have been a huge music fan - particularly Rock N Roll, Country Music, and Big Band / Swing - not the music usually associated with a 21 year old! (lol) HITS AND RARITIES Some of the biggest hits, mixed with some rare album tracks / B sides. You'll hear everything from Country, to Big Band, to Singer / Songwriters, and almost everything<br>in between.",
-          "caption4": "Originally from the Shetland Islands and now residing in Roslin. A retired teacher who has been involved in the entertainment profession on a part time basis for more than 40 years. This in the main involves performing music both with bands and individually in many different establishments.\"Pentland Folk\", &nbsp;a show which provides a wide variety of &nbsp;entertainment mainly belonging to the folk music category.",
-          "button1": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
-          "button2": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
-          "button3": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
-          "button4": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
-          "media1": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/face1.png",
-              "class": "features-img",
-              "width": 600,
-              "link": "",
-              "alt": "",
-              "title": ""
-            }
-          },
-          "media2": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/dick-b-434x486.jpg",
-              "class": "features-img",
-              "width": 600,
-              "link": "",
-              "alt": "Dick Barry",
-              "title": ""
-            }
-          },
-          "media3": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/ryan-434x486.jpg",
-              "class": "features-img",
-              "width": 600,
-              "link": "",
-              "alt": "",
-              "title": ""
-            }
-          },
-          "media4": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/johnny-w-434x486.jpg",
-              "class": "features-img",
-              "width": 600,
-              "link": "",
-              "alt": "",
-              "title": ""
-            }
-          },
-          "alias": "colorm/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "team1",
-          "_anchor": "team1-j",
-          "_styles": {
-            ".subtitle2 SPAN": {
-              "font-size": "12px"
-            },
-            ".subtitle1": {
-              "font-size": "12px"
-            },
-            ".subtitle3 DIV": {
-              "font-size": "12px"
-            },
-            ".subtitle2": {
-              "font-size": "12px"
-            },
-            ".subtitle4": {
-              "font-size": "12px"
-            }
-          }
-        },
-        {
-          "_params": {
-            "showTitle": false,
-            "showSubtitle": false,
-            "rows": "1",
-            "bgItem1": "#f5f5f5",
-            "bgItem2": "#ffc80a",
-            "bgItem3": "#d2dde4",
-            "bgItem4": "#212121",
-            "paddingTop": "0",
-            "paddingBottom": "0",
-            "bgImageRadio": false,
-            "bgImage": "@PROJECT_PATH@/assets/images/pricing-table-bg.jpg",
-            "parallax": false,
-            "bgColorRadio": true,
-            "bgColor": "#ecf0f1",
-            "bgVideoRadio": false,
-            "bgVideo": {
-              "url": "https://www.youtube.com/watch?v=uNCr7NdOJgw"
-            },
-            "overlay": false,
-            "overlayColor": "#222",
-            "overlayOpacity": 0.5
-          },
-          "title": "Our Team",
-          "subtitle": "This new-found knowledge may then be used by engineers to create new tools and machines.",
-          "person1": "Paul Clarke",
-          "person2": "Eric Platten",
-          "person3": "Barry Bostwick",
-          "person4": "Anna Cameron",
-          "subtitle1": "60’s CULT WEEKEND\n. Sunday 6pm",
-          "subtitle2": "Monday 7pm, Wednesday 10am<br>Saturday &amp; Sunday 7am",
-          "subtitle3": "DESIGNER",
-          "subtitle4": "PHOTOGRAPHER",
-          "caption1": "Clarky is a Veteran Radio Presenter and has Broadcast for many years. An Original Crystal FM presenter from the Stations commencement, Clarky's specialist 60s programme is a mix of Hits and Rarities featuring Pop,Northern Soul, Motown, Psych, Rock ‘n’ Roll, Reggae and much much more.",
-          "caption2": "Etc etc etc etc<br>now then<br>who why where",
-          "caption3": "In daily life, maybe you have so familiar with a number of daily necessities, well, do you .",
-          "caption4": "Every year more than four million traffic lights use an estimated three billion .",
-          "button1": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
-          "button2": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
-          "button3": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
-          "button4": "<a data-app-btn=\"true\" href=\"https://mobirise.com\" class=\"btn btn-primary-outline btn-primary\">BUY NOW</a>",
-          "media1": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/paul-clarke-438x485.jpg",
-              "class": "features-img",
-              "width": 600,
-              "link": "",
-              "alt": "",
-              "title": ""
-            }
-          },
-          "media2": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/eric-platten-434x484.jpg",
-              "class": "features-img",
-              "width": 600,
-              "link": "",
-              "alt": "",
-              "title": ""
-            }
-          },
-          "media3": {
-            "image": {
-              "active": true,
-              "src": "@THEME_PATH@/components/_images/team/face3.png",
-              "class": "features-img",
-              "width": 600
-            }
-          },
-          "media4": {
-            "image": {
-              "active": true,
-              "src": "@THEME_PATH@/components/_images/team/face4.png",
-              "class": "features-img",
-              "width": 600
-            }
-          },
-          "alias": "colorm/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "team1",
-          "_anchor": "team1-k",
-          "_styles": {
-            ".subtitle1": {
-              "font-size": "12px"
-            },
-            ".subtitle2": {
-              "font-size": "12px"
-            }
-          }
-        },
-        {
-          "loadsvg": "@PROJECT_PATH@/assets/images/loading.svg",
-          "_params": {
-            "paddingTop": 0,
-            "paddingBottom": 0,
-            "postToLoad": 3,
-            "facebook": "http://facebook.com/CrystalFMPenicuik",
-            "twitter": "https://twitter.com/crystalfmradio",
-            "google": "",
-            "youtube": "",
-            "bgColorRadio": true,
-            "bgColor": "#fff",
-            "bgImageRadio": false,
-            "bgImage": "@ADDONS_PATH@/social-feed/feed/assets/comments_bg.jpg",
-            "overlay": true,
-            "overlayColor": "#7e9b9f",
-            "overlayOpacity": 0.6
-          },
-          "alias": "social-feed",
+          "_customTemplate": true,
+          "_afterNavbarItem": false,
+          "_customHTML": "<!-- BEGINS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->\n[JS_CODE_0]\n[JS_CODE_1]\n<!-- ENDS: AUTO-GENERATED MUSES RADIO PLAYER CODE -->",
+          "_customCSS": "/* Type valid AMP CSS here */\n\ndiv {\n  padding: 80px 0;\n  color: #777;\n  text-align: center;\n}\np {\n  font-size: 60px;\n  color: #777;\n}",
+          "alias": "code-editor",
           "_tags": [
             "Extension"
           ],
-          "_name": "feed",
-          "_anchor": "feed-s"
-        }
-      ]
-    },
-    "page1.html": {
-      "settings": {
-        "title": "Page 1",
-        "order": 2
-      },
-      "components": [
-        {
-          "_styles": {
-            ".hide-buttons .nav-btn": {
-              "display": "none !important"
-            },
-            ".navbar-caption": {
-              "color": "#ffffff"
-            },
-            ".navbar-toggler": {
-              "color": "#ffffff"
-            },
-            ".close-icon::before, .close-icon::after": {
-              "background-color": "#ffffff"
-            },
-            ".link, .dropdown-item": {
-              "color": "#ffffff"
-            },
-            ".link": {
-              "font-size": "1.15rem"
-            },
-            ".dropdown-item, .nav-dropdown-sm .link": {
-              "font-size": "1.245rem"
-            },
-            ".link:hover, .link:focus": {
-              "color": "@primaryColor"
-            },
-            ".dropdown-item:hover::before, .dropdown-item:focus::before": {
-              "background": "@primaryColor"
-            },
-            ".dropdown-item:hover, .dropdown-item:focus": {
-              "color": "#ffffff"
-            },
-            ".link[aria-expanded=\"true\"], .dropdown-menu": {
-              "background": "#061d4d"
-            },
-            ".nav-dropdown-sm .link:focus, .nav-dropdown-sm .link:hover, .nav-dropdown-sm .dropdown-item:focus, .nav-dropdown-sm .dropdown-item:hover": {
-              "background": "#092a6e!important"
-            },
-            ".navbar, .nav-dropdown-sm, .nav-dropdown-sm .link[aria-expanded=\"true\"], .nav-dropdown-sm .dropdown-menu": {
-              "background": "#0a2f7c"
-            },
-            ".bg-color.transparent .link": {
-              "color": "#ffffff",
-              "transition": "none"
-            },
-            ".bg-color.transparent.opened .link": {
-              "transition": "color .2s ease-in-out"
-            },
-            ".bg-color.transparent.opened .link:hover, .bg-color.transparent.opened .link:focus": {
-              "color": "@primaryColor"
-            },
-            ".link[aria-expanded=\"true\"], .dropdown-item[aria-expanded=\"true\"]": {
-              "color": "#f39c12!important"
-            }
-          },
-          "_params": {
-            "logo": true,
-            "showBrand": false,
-            "hideButtons": true,
-            "sticky": true,
-            "collapsed": true,
-            "transparent": false,
-            "bgColor": "#0a2f7c",
-            "fontSize": "1.15",
-            "fontName": {},
-            "fontColor": "#ffffff",
-            "fontHoverColor": "@primaryColor"
-          },
-          "items": "<li class=\"nav-item\"><a data-app-btn=\"true\" class=\"nav-link link\" href=\"https://mobirise.com/\">OVERVIEW</a></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\">FEATURES</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile friendly</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Based on Bootstrap</a><div class=\"dropdown\"><a data-app-btn=\"true\" class=\"dropdown-item dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\">Trendy blocks</a><div class=\"dropdown-menu dropdown-submenu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image/content slider</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact forms</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Image gallery</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Mobile menu</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google maps</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Social buttons</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Google fonts</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Video background</a></div></div><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Host anywhere</a></div></li><li class=\"nav-item dropdown\"><a data-app-btn=\"true\" class=\"nav-link link dropdown-toggle\" data-toggle=\"dropdown-submenu\" href=\"https://mobirise.com/\">HELP</a><div class=\"dropdown-menu\"><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"http://forums.mobirise.com/\">Forum</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Tutorials</a><a data-app-btn=\"true\" class=\"dropdown-item\" href=\"https://mobirise.com/\">Contact us</a></div></li><li class=\"nav-item nav-btn\"><a data-app-btn=\"true\" data-button=\"\" data-app-selector=\".btn\" class=\"nav-link btn btn-white btn-white-outline\" href=\"https://mobirise.com/\">DOWNLOAD</a></li>",
-          "logo": {
-            "image": {
-              "active": true,
-              "src": "@PROJECT_PATH@/assets/images/logo-450px-139x128.jpg",
-              "height": 128,
-              "alt": "Mobirise",
-              "link": "https://mobirise.com",
-              "title": ""
-            },
-            "iconFont": {
-              "class": "mbr-iconfont mbr-iconfont-menu",
-              "link": "https://mobirise.com",
-              "size": 0
-            }
-          },
-          "brand": "<a class=\"navbar-caption\" data-app-btn=\"true\" data-app-selector=\".navbar-caption\" href=\"https://mobirise.com\" data-app-placeholder=\"Type Brand Name\">MOBIRISE</a>",
-          "alias": "colorm/components",
-          "_tags": [
-            "Theme"
-          ],
-          "_name": "menu",
-          "_anchor": "menu-9"
+          "_name": "pro.custom-html",
+          "_anchor": "custom-html-2",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [
+            "<script type=\"text/javascript\" src=\"https://hosted.muses.org/mrp.js\"></script>",
+            "<script type=\"text/javascript\">\nMRP.insert({\n'url':'http://stream.audiospace.co/crystalradio',\n'codec':'mp3',\n'volume':100,\n'autoplay':false,\n'jsevents':true,\n'buffering':0,\n'title':'Crystal FM',\n'welcome':'Hit play to listen',\n'wmode':'transparent',\n'skin':'mcclean',\n'width':180,\n'height':60\n});\n</script>"
+          ]
         }
       ]
     }
